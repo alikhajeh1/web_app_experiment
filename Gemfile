@@ -11,7 +11,6 @@ gem "paperclip-ffmpeg",       "0.7.0"
 gem "paperclip",              "2.3.16"
 gem "delayed_paperclip",      "0.7.1"
 
-
 group :development, :test do
   gem 'itslog',               '~> 0.6.1'
   gem 'ruby-debug19',         '~> 0.11.6', :require => 'ruby-debug'

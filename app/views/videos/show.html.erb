@@ -16,7 +16,11 @@
 </p>
 <p>
   <b>Movie:</b>
-  <%= image_tag @video.movie.url(:mp4video) %>
+  <video id="the_video" class="video-js vjs-default-skin" controls
+         preload="auto" width="640" height="480" poster="<%= @video.movie_url(:png) %>"
+         data-setup="{}">
+    <source src="<%= @video.movie_url(:mp4) %>" type='video/mp4'>
+  </video>
 </p>
 
 <%= link_to 'Edit', edit_video_path(@video) %> |

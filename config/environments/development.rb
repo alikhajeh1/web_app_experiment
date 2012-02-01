@@ -1,8 +1,9 @@
 MyApp::Application.configure do
   # Path to ffmpeg
   Paperclip.options[:command_path] = "/usr/local/bin/"
+  config.app_hostname = 'http://localhost:3000/'
 
-  # Settings specified here will take precedence over those in config/application.rb
+
 
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
