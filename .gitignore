@@ -1,0 +1,21 @@
+# Rails local state
+db/*.sqlite3
+log/*.log
+tmp/
+.sass-cache/
+
+# Local system state
+.rvmrc
+.bundle
+
+# MacOSX metadata
+.DS_Store
+
+# Rubymine metadata
+.idea
+
+# VI temp files
+*.swp
+
+# Any pid files from testing and running rainbows
+*.pid
