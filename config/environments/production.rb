@@ -1,5 +1,7 @@
 MyApp::Application.configure do
-  # Settings specified here will take precedence over those in config/application.rb
+  # Path to ffmpeg
+  Paperclip.options[:command_path] = "/usr/local/bin/"
+
 
   # Code is not reloaded between requests
   config.cache_classes = true
