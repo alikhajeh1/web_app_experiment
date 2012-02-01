@@ -19,7 +19,6 @@ class Video < ActiveRecord::Base
   process_in_background :movie
 
   validates :name, :author, :presence => true
-  validates_attachment_presence :movie
 
   def movie_url(style)
     Rails.application.config.app_hostname + movie.path(style).gsub!(/.*?(?=system)/im, "")
