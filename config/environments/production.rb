@@ -1,7 +1,7 @@
 MyApp::Application.configure do
   # Path to ffmpeg
   Paperclip.options[:command_path] = "/usr/local/bin/"
-  config.app_hostname = 'http://localhost:3000/' # must end with a /
+  config.app_hostname = 'http://138.251.198.23/' # must end with a /
 
 
 
