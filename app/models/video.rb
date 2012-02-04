@@ -23,4 +23,7 @@ class Video < ActiveRecord::Base
   def movie_url(style)
     Rails.application.config.app_hostname + movie.path(style).gsub!(/.*?(?=system)/im, "")
   end
+
+  attr_accessible :name, :description, :author, :movie_file_name, :movie_content_type, :movie_file_size, :movie_updated_at
+
 end
