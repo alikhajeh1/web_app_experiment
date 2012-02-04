@@ -32,12 +32,12 @@ ActiveRecord::Schema.define(:version => 20120201102201) do
     t.string   "name"
     t.text     "description"
     t.string   "author"
-    t.datetime "created_at",         :null => false
-    t.datetime "updated_at",         :null => false
     t.string   "movie_file_name"
     t.string   "movie_content_type"
     t.integer  "movie_file_size"
     t.datetime "movie_updated_at"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
   end
 
 end
