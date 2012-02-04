@@ -10,6 +10,7 @@ gem 'delayed_job',            '2.1.4'
 gem "paperclip-ffmpeg",       "0.7.0"
 gem "paperclip",              "2.3.16"
 gem "delayed_paperclip",      "0.7.1"
+gem "thin"
 
 group :development, :test do
   gem 'itslog',               '~> 0.6.1'
