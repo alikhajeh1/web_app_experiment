@@ -51,5 +51,5 @@ MyApp::Application.routes.draw do
   resources :videos do
     get 'movie', :on => :member
   end
-  # See how all your routes lay out with "rake routes"
+  root :to => 'videos#index'
 end
