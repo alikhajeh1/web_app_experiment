@@ -11,6 +11,7 @@ gem "paperclip-ffmpeg",       "0.7.0"
 gem "paperclip",              "2.3.16"
 gem "delayed_paperclip",      "0.7.1"
 gem "thin"
+gem 'foreman',                '~> 0.26.1'
 
 group :development, :test do
   gem 'itslog',               '~> 0.6.1'
