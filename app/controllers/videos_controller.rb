@@ -10,7 +10,10 @@ class VideosController < ApplicationController
   # GET /videos
   # GET /videos.json
   def index
-    @videos = Video.all
+    # Select last 100 records that have a processed movie
+    @videos = Video.order('created_at DESC')
+    @videos.select!{|v| File.exists?(v.movie.path(:mp4))}
+    @videos = @videos[0..100]
 
     respond_to do |format|
       format.html # index.html.erb
@@ -52,8 +55,8 @@ class VideosController < ApplicationController
 
     respond_to do |format|
       if @video.save
-        format.html { redirect_to @video, notice: 'Video was successfully created.' }
-        format.json { render json: @video, status: :created, location: @video }
+        format.html { redirect_to videos_path, notice: 'Video was successfully created.' }
+        format.json { render json: videos_path, status: :created, location: @video }
       else
         format.html { render action: "new" }
         format.json { render json: @video.errors, status: :unprocessable_entity }
